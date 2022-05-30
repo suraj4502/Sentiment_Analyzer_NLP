@@ -50,7 +50,7 @@ X_sm, Y_sm = smote.fit_resample(X_vectorized, Y)
 X_sma, Y_sma = smote.fit_resample(X_sm,Y_sm)
 #print(Y_sma.value_counts())
 
-X_train, X_test, Y_train, Y_test = train_test_split(X_sma,Y_sma,stratify=Y_sma,test_size=0.2)
+#X_train, X_test, Y_train, Y_test = train_test_split(X_sma,Y_sma,stratify=Y_sma,test_size=0.2)
 
 ####Model Building
 #model = SVC(C=10,gamma=1,kernel='rbf')
@@ -58,6 +58,8 @@ X_train, X_test, Y_train, Y_test = train_test_split(X_sma,Y_sma,stratify=Y_sma,t
 #predictions = model.predict(X_test)
 #st.write(classification_report(Y_test, predictions))
 #st.write(accuracy_score(Y_test, predictions))
+
+
 st.title("Sentment Analyzer..")
 
 from PIL import Image
@@ -71,7 +73,7 @@ text = st.text_area("Enter some text, a review given by a customer, a tweet, or 
                     height=175)
 text1 = get_cleanText(text)
 text2=[text1]
-text_vectorized =vectorizer.transform(text2)
+#text_vectorized =vectorizer.transform(text2)
 #pred=model.predict(text_vectorized)
 #st.write(pred)
 
@@ -128,9 +130,12 @@ st.markdown("\n")
 st.markdown("\n")
 st.markdown("\n")
 st.markdown("\n")
+st.write(" ")
+st.write(" ")
+st.write(" ")
 st.markdown("***")
 
 
 #st.markdown("---")
-st.markdown("- Developed by `SKY`.   ⇨[github ](https://github.com/suraj4502), [Linkedin](https://www.linkedin.com/in/surajkumar-yadav-6ab2011a4/),[Ig](https://www.instagram.com/suraj452/).")
+st.markdown("- Developed by `SKY`.   ⇨[Ig](https://www.instagram.com/suraj452/),[github ](https://github.com/suraj4502), [Linkedin](https://www.linkedin.com/in/surajkumar-yadav-6ab2011a4/).")
 #st.markdown("---")
