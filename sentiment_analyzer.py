@@ -16,6 +16,8 @@ from sklearn.metrics import accuracy_score,f1_score,classification_report
 from sklearn.svm import SVC
 import streamlit as st
 import time
+from textblob import TextBlob
+
 
 
 #function for text preprocessing
@@ -71,8 +73,10 @@ st.markdown("\n")
 text = st.text_area("Enter some text, a review given by a customer, a tweet, or "
              "anything else in the below text box and then click on the Button.",
                     height=175)
+text= str(TextBlob(text).correct())
 text1 = get_cleanText(text)
-text2=[text1]
+
+#text2=[text1]
 #text_vectorized =vectorizer.transform(text2)
 #pred=model.predict(text_vectorized)
 #st.write(pred)
