@@ -16,7 +16,8 @@ from sklearn.metrics import accuracy_score,f1_score,classification_report
 from sklearn.svm import SVC
 import streamlit as st
 import time
-from textblob import TextBlob
+from textblob import TextBlob, Word, Blobber
+from textblob.taggers import NLTKTagger
 
 
 
